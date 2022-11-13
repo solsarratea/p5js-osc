@@ -9,7 +9,6 @@ var sockets = new Map()
 oscServer = new osc.Server(port, "localhost");
 oscServer.on('message', function(msg) {
 	console.log("message " + msg)
-	console.log(sockets)
 	sockets.forEach((v, k) => {
 		console.log("emitting " + msg + " to " + k)
 		v.emit("message", msg)
