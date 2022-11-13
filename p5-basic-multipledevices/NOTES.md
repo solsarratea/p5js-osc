@@ -27,6 +27,7 @@ Running a p5 sketch (app,  in one computer) to receive messages from a processin
   - PROBLEM: Doesn't work. Can not acces `http:// { IP } : { PORT }`, it is not exposed to other devices within the same network.
     - QUESTION 1: Using ngrok to expose it? // Docker container?
     - QUESTION 2: Should add layer of IPs?
+    ```
          forward from processing to { OSC_SENDER_IP }:{ PROCESSING_PORT }
         { SENDER_HOST_IP }:{ PROCESSING_PORT } -> { SENDER_HOST_IP }:{ OSC_PORT_OUT }
         { BRIDGE_IP }:{ OSC_PORT_OUT } -> { BRIDGE_IP }:{ OSC_PORT_IN }
@@ -36,6 +37,7 @@ Running a p5 sketch (app,  in one computer) to receive messages from a processin
         { BRIDGE_IP }:{ OSC_PORT_IN } ->  { OSC_RECEIVER_IP }:{ OSC_PORT_IN }
         forward OSC_RECEIVER_IP <- LOCALHOST 
         { LOCALHOST }:8080 -> app
+    ```
  
 
 
